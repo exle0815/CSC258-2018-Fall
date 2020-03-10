@@ -1,0 +1,22 @@
+\\ Verilog file for 7-to-1 multiplexer
+module seven_to_one_mux(LEDR, SW);
+	input [9:0] SW;
+	output [9:0] LEDR;
+
+	mux7to1 u0(
+			.SW0(SW[0]),
+			.SW1(SW[1]),
+			.SW2(SW[2]),
+			.SW3(SW[3]),
+			.SW4(SW[4]),
+			.SW5(SW[5]),
+			.SW6(SW[6]),
+			.S0(SW[9]),
+			.S1(SW[8]),
+			.S2(SW[7]),
+			.Out(LEDR[0])
+			);
+endmodule
+
+module mux7to1(SW0, SW1, SW2, SW3, SW4, SW5, SW6, S0, S1, S2, Out);
+	input 

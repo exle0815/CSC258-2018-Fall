@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at project.v(92): object "capture" differs only in case from object "CAPTURE" in the same scope File: C:/Users/exle0/Documents/2018_Fall/CSC_258/Project/project_file/project.v Line: 92
+Info (10281): Verilog HDL Declaration information at project.v(113): object "incre" differs only in case from object "INCRE" in the same scope File: C:/Users/exle0/Documents/2018_Fall/CSC_258/Project/project_file/project.v Line: 113
+Info (10281): Verilog HDL Declaration information at project.v(95): object "draw" differs only in case from object "DRAW" in the same scope File: C:/Users/exle0/Documents/2018_Fall/CSC_258/Project/project_file/project.v Line: 95

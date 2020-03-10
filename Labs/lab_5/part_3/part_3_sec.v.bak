@@ -1,0 +1,22 @@
+module part_3(SW, KEY, LEDR);
+	input [9:0] SW, KEY;
+	output [9:0] LEDR;
+	
+	wire divider_to_register
+	wire [13:0] mux_to_register
+	
+	rate_divider r0(.start(KEY[0]), .d(25'd24999999), .en(1'b1), .clk(CLOCK_50), .clear_b(KEY[0]), 
+			.q(divider_to_register));
+	mux8to1 r1(
+			.s(14b'10101000000000), 
+			.t(14b'11100000000000),
+			.u(14b'10101110000000),
+			.v(14b'10101011100000),
+			.w(14b'10111011100000),
+			.x(14b'11101010111000),
+			.y(14b'11101011101110),
+			.z(14b'11101110101000),
+			.sel(SW[2:0])
+			.q(mux_to_register[13:0])
+			);
+	shift_register r2(.d

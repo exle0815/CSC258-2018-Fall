@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/exle0/Documents/2018_fall/CSC_258/Labs/lab_2
+vmux
+!s110 1538433273
+!i10b 1
+!s100 cdR_1YenO8Tj:kQjco8Hj0
+IR>@9X`C0?ZYPT;Gz=0e8a3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/exle0/Documents/2018_Fall/CSC_258/Labs/lab_2
+Z2 w1537802342
+Z3 8mux.v
+Z4 Fmux.v
+L0 6
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1538433273.000000
+Z7 !s107 mux.v|
+Z8 !s90 -reportprogress|300|-timescale|1ns/1ns|mux.v|
+!i113 1
+Z9 o-timescale 1ns/1ns
+Z10 tCvgOpt 0
+vmux2
+Z11 !s110 1538432598
+!i10b 1
+!s100 DhQMdQ_:0c^nWMPA>W9Q>1
+I20RCemEZclfQHkb^?bz;30
+R0
+R1
+Z12 w1538092420
+Z13 8mux2(part2).v
+Z14 Fmux2(part2).v
+L0 6
+R5
+r1
+!s85 0
+31
+Z15 !s108 1538432598.000000
+Z16 !s107 mux2(part2).v|
+Z17 !s90 -reportprogress|300|-timescale|1ns/1ns|mux2(part2).v|
+!i113 1
+R9
+R10
+vmux2to1
+!s110 1538433274
+!i10b 1
+!s100 TTIHj49<CR0@RI;z:V^^52
+I;;U2B[KUn:OCMzk>Rck643
+R0
+R1
+R2
+R3
+R4
+L0 18
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+vmux2to1_1
+Z18 !s110 1538432265
+!i10b 1
+!s100 ?QQbDWfQKo5XmM:IbY_@g3
+IX3ZD;9VIYIFhoSZ9QcbCk2
+R0
+R1
+Z19 w1537896337
+Z20 8part2.v
+Z21 Fpart2.v
+L0 35
+R5
+r1
+!s85 0
+31
+Z22 !s108 1538432265.000000
+Z23 !s107 part2.v|
+Z24 !s90 -reportprogress|300|-timescale|1ns/1ns|part2.v|
+!i113 1
+R9
+R10
+vmux2to1_2
+R18
+!i10b 1
+!s100 =c1b^EVJjR=D1hl^=hX2g0
+I@[V`zdj]obg:dCEj06m:W0
+R0
+R1
+R19
+R20
+R21
+L0 45
+R5
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 1
+R9
+R10
+vmux2to1_3
+R18
+!i10b 1
+!s100 EB?P<jJlJ@LY=f9kW<BTo0
+Ino;M<77_SWJ0OI3aoC1H;2
+R0
+R1
+R19
+R20
+R21
+L0 55
+R5
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 1
+R9
+R10
+vmux4to1
+R11
+!i10b 1
+!s100 Qh9_4RNoR2Yo8KKK6YH>S0
+If3kJdn::Ii:1]7PaY70fU1
+R0
+R1
+R12
+R13
+R14
+L0 21
+R5
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 1
+R9
+R10
+vseven_seg_decoder
+!s110 1538084345
+!i10b 1
+!s100 1RfXLCUZ4ZZfDj>a`jOM62
+I:Koh;4g^7SY6]flM8LUk<0
+R0
+R1
+w1538023088
+Z25 8seven_seg_decoder.v
+Z26 Fseven_seg_decoder.v
+L0 2
+R5
+r1
+!s85 0
+31
+!s108 1538084344.000000
+Z27 !s107 seven_seg_decoder.v|
+Z28 !s90 -reportprogress|300|-timescale|1ns/1ns|seven_seg_decoder.v|
+!i113 1
+R9
+R10
+vseven_seg_decoder_final
+!s110 1538010320
+!i10b 1
+!s100 YH09B6=iI1bPFc=C2gh:R3
+ImC<m]751eM;A`R^NldEM@1
+R0
+R1
+w1538010313
+R25
+R26
+L0 2
+R5
+r1
+!s85 0
+31
+!s108 1538010320.000000
+R27
+R28
+!i113 1
+R9
+R10

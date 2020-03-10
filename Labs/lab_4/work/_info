@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dc:/Users/exle0/Documents/2018_Fall/CSC_258/Labs/lab_4
+vleftshift
+Z1 !s110 1539118282
+!i10b 1
+!s100 hOcPILPAJkc0`Ai9QX@lD3
+IYg@W:ciKfLE8JGWb[:3JX3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1539118253
+Z4 8practice_2.v
+Z5 Fpractice_2.v
+L0 13
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1539118282.000000
+Z8 !s107 practice_2.v|
+Z9 !s90 -reportprogress|300|-timescale|1ns/1ns|practice_2.v|
+!i113 1
+Z10 o-timescale 1ns/1ns
+Z11 tCvgOpt 0
+vpractice_1
+!s110 1539051618
+!i10b 1
+!s100 9<e2VAcY;0AzZlOEUoB=41
+If0?0o];ANk7S]9<KgF:ZW0
+R2
+R0
+w1539051609
+8practice_1.v
+Fpractice_1.v
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1539051618.000000
+!s107 practice_1.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|practice_1.v|
+!i113 1
+R10
+R11
+vpractice_2
+R1
+!i10b 1
+!s100 JCfVdfTJR9dodhneg?zbC1
+I8:06VVF2;YRAV;`G_H??m0
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vrightshift
+!s110 1539117484
+!i10b 1
+!s100 1e2`?k8aQcZd1M[Ck__=@0
+In?4>Hd8:80H:Y:k:mG`<;3
+R2
+R0
+w1539117473
+R4
+R5
+L0 28
+R6
+r1
+!s85 0
+31
+!s108 1539117484.000000
+R8
+R9
+!i113 1
+R10
+R11

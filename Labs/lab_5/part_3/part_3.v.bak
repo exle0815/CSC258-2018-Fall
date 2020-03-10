@@ -1,0 +1,291 @@
+module part_3(SW, KEY, LEDR);
+	input [9:0] SW, KEY;
+	output [9:0] LEDR;
+	
+	wire divider_to_register;
+	wire [13:0] mux_to_register;
+	
+	rate_divider r0(.start(KEY[1]), .d(25'd24999999), .en(1'b1), .clk(CLOCK_50), .clear_b(KEY[0]), 
+			.q(divider_to_register));
+	mux8to1 r1(
+			.s(14'b10101000000000), 
+			.t(14'b11100000000000),
+			.u(14'b10101110000000),
+			.v(14'b10101011100000),
+			.w(14'b10111011100000),
+			.x(14'b11101010111000),
+			.y(14'b11101011101110),
+			.z(14'b11101110101000),
+			.sel(SW[2:0]),
+			.result(mux_to_register[13:0])
+			);
+			
+	Shifter p0(
+			.Load_Val(mux_to_register[13:0]),
+			.Load_n(KEY[1]),
+			.en(divider_to_register),
+			.ASR(1'b0),
+			.Clk(CLOCK_50),
+			.Reset_n(KEY[0]),
+			.Q(LEDR[0])
+			);		
+
+endmodule
+
+module rate_divider(start, d, en, clk, clear_b, q);
+	input [24:0]d;
+	input start, en, clk, clear_b;
+	output q;
+	
+	reg [24:0] out;
+	always @(posedge clk, negedge clear_b)
+	begin
+		if (clear_b == 1'b0)
+			out <= 25'b1;
+		else if (start == 1'b0)
+			out <= d;
+		else if (en == 1'b1)
+			begin
+				if (out == 25'b0)
+					out <= d;
+				else
+					out <= out - 1'b1;
+			end
+	end
+   assign q = (out == 25'b0) ? 1 : 0;
+endmodule
+
+module mux8to1(s, t, u, v, w, x, y, z, sel, result);
+	input [13:0] s, t, u, v, w, x, y, z;
+	input [2:0] sel;
+	output [13:0] result;
+	
+	reg [13:0] mux_out;
+	always @(*)
+	begin
+		case (sel[2:0])
+			3'b000: mux_out = 14'b00000000010101;
+			3'b001: mux_out = 14'b00000000000111;
+			3'b010: mux_out = 14'b00000001110101;
+			3'b011: mux_out = 14'b00000111010101;
+			3'b100: mux_out = 14'b00000111011101;
+			3'b101: mux_out = 14'b00011101010111;
+			3'b110: mux_out = 14'b01110111010111;
+			3'b111: mux_out = 14'b00010101110111;
+			default: mux_out = 14'b0;
+		endcase
+	end
+	assign result0 = mux_out;
+	assign result1 = mux_out;
+endmodule
+
+module Shifter(Load_Val, Load_n, en, ASR, Clk, Reset_n, Q);
+	input [13:0] Load_Val;
+	input Load_n, en, ASR, Clk, Reset_n;
+	output Q;
+	
+	wire [13:0] out_in;
+	
+	mux2to1 u0(.a(1'b0), .b(1'b1), .sel(ASR), r(out_in[0]);
+	
+	shifterbit s0(
+			.load_val(Load_Val[0]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n)
+			.in(out_in[0]),
+			.q(out_in[1])
+			);
+	
+	shifterbit s1(
+			.load_val(Load_Val[1]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n),
+			.in(out_in[1]),
+			.q1(out_in[2])
+			);
+	
+	shifterbit s2(
+			.load_val(Load_Val[2]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n)
+			.in(out_in[2]),
+			.q(out_in[3])
+			);
+	
+	shifterbit s3(
+			.load_val(Load_Val[3]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n),
+			.in(out_in[3]),
+			.q1(out_in[4])
+			);
+	
+	shifterbit s4(
+			.load_val(Load_Val[4]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n)
+			.in(out_in[4]),
+			.q(out_in[5])
+			);
+	
+	shifterbit s5(
+			.load_val(Load_Val[5]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n),
+			.in(out_in[5]),
+			.q1(out_in[6])
+			);
+	
+	shifterbit s6(
+			.load_val(Load_Val[6]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n)
+			.in(out_in[6]),
+			.q(out_in[7])
+			);
+	
+	shifterbit s7(
+			.load_val(Load_Val[7]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n),
+			.in(out_in[7]),
+			.q1(out_in[8])
+			);
+	
+	shifterbit s8(
+			.load_val(Load_Val[8]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n),
+			.in(out_in[8]),
+			.q1(out_in[9])
+			);
+	
+	shifterbit s9(
+			.load_val(Load_Val[9]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n)
+			.in(out_in[9]),
+			.q(out_in[10])
+			);
+	
+	shifterbit s10(
+			.load_val(Load_Val[10]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n),
+			.in(out_in[10]),
+			.q1(out_in[11])
+			);
+	
+	shifterbit s11(
+			.load_val(Load_Val[11]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n)
+			.in(out_in[11]),
+			.q(out_in[12])
+			);
+	
+	shifterbit s12(
+			.load_val(Load_Val[12]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n),
+			.in(out_in[12]),
+			.q1(out_in[13])
+			);
+	
+	shifterbit s13(
+			.load_val(Load_Val[13]),
+			.load_n(Load_n),
+			.shift(en),
+			.clk(Clk),
+			.reset_n(Reset_n)
+			.in(out_in[13]),
+			.q(Q)
+			);
+			
+endmodule
+	
+module shifterbit(load_val, load_n, shift, clk, reset_n, in, q);
+		input load_val, load_n, shift, clk, reset_n, in;
+		output q;
+		
+		wire out_to_in, mux_to_mux, data_to_dff;
+		
+		mux2to1 x0(
+				.a(out_to_in),
+				.b(in),
+				.sel(shift),
+				.r(mux_to_mux)
+				);
+		
+		mux2to1 x1(
+				.a(load_val),
+				.b(mux_to_mux),
+				.sel(load_n),
+				.r(data_to_dff)
+				);
+		
+		flipflop x2(
+				.d(data_to_dff),
+				.clock(clk),
+				.reset_in_dff(reset_n),
+				.flip_out0(q0),
+				.flip_out1(out_to_in)
+				);
+
+endmodule
+
+module mux2to1(a, b, sel, r);
+	input a, b, sel;
+	output r;
+	assign r = (a & ~sel)|(b & sel);
+
+endmodule
+
+module flipflop(d, clock, reset_in_dff, flip_out0, flip_out1);
+	input d, clock, reset_in_dff;
+	output flip_out0, flip_out1;
+	
+	reg out;
+	
+	always @(posedge clock, negedge reset_in_dff)
+	
+	begin
+	
+		if (reset_in_dff == 1'b0)
+			out <= 1'b0;
+		else
+			out <= d;
+			
+	end
+	
+	assign flip_out0 = out;
+	assign flip_out1 = out;
+
+endmodule
+

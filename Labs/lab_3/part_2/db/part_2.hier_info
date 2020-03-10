@@ -1,0 +1,108 @@
+|part_2
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= four_bit_adder:u0.S
+LEDR[1] <= four_bit_adder:u0.S
+LEDR[2] <= four_bit_adder:u0.S
+LEDR[3] <= four_bit_adder:u0.S
+LEDR[4] <= four_bit_adder:u0.cout
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|part_2|four_bit_adder:u0
+cin => cin.IN1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+S[0] <= four_bit_adder_piece:f0.s
+S[1] <= four_bit_adder_piece:f1.s
+S[2] <= four_bit_adder_piece:f2.s
+S[3] <= four_bit_adder_piece:f3.s
+cout <= four_bit_adder_piece:f3.cout
+
+
+|part_2|four_bit_adder:u0|four_bit_adder_piece:f0
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+cin => cin.IN1
+cout <= mux2to1:m0.m
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part_2|four_bit_adder:u0|four_bit_adder_piece:f0|mux2to1:m0
+x => m.IN0
+y => m.IN0
+sel => m.IN1
+sel => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part_2|four_bit_adder:u0|four_bit_adder_piece:f1
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+cin => cin.IN1
+cout <= mux2to1:m0.m
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part_2|four_bit_adder:u0|four_bit_adder_piece:f1|mux2to1:m0
+x => m.IN0
+y => m.IN0
+sel => m.IN1
+sel => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part_2|four_bit_adder:u0|four_bit_adder_piece:f2
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+cin => cin.IN1
+cout <= mux2to1:m0.m
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part_2|four_bit_adder:u0|four_bit_adder_piece:f2|mux2to1:m0
+x => m.IN0
+y => m.IN0
+sel => m.IN1
+sel => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part_2|four_bit_adder:u0|four_bit_adder_piece:f3
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+cin => cin.IN1
+cout <= mux2to1:m0.m
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part_2|four_bit_adder:u0|four_bit_adder_piece:f3|mux2to1:m0
+x => m.IN0
+y => m.IN0
+sel => m.IN1
+sel => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+

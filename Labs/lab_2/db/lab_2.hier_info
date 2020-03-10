@@ -1,0 +1,13 @@
+|lab_2
+LEDR[0] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+SW9 => inst10.IN0
+SW9 => inst8.IN0
+SW3 => inst5.IN0
+SW8 => inst5.IN1
+SW8 => inst.IN0
+SW8 => inst3.IN1
+SW2 => inst4.IN0
+SW1 => inst3.IN0
+SW0 => inst2.IN0
+
+

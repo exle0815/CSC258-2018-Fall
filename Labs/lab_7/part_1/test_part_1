@@ -1,0 +1,14 @@
+vlib work
+
+vlog -timescale 1ps/1ps ram32x4.v
+
+vsim -L altera_mf_ver ram32x4
+
+log {/*}
+add wave {/*}
+
+force {address} 5'b00000 0, 5'b10000 20, 5'b10001 40, 5'b11001 60, 5'b11100 80, 5'b11111 100 -r 120
+force {clock} 1 0, 0 10 -r 20
+force {data} 4'b1100 0, 4'b0011 20, 4'b1001 40, 4'b1100 60, 4'b0011 80, 4'b1001 100, 4'b0000 120, 4'b0000 140, 4'b0000 160, 4'b0000 180, 4'b0000 200, 4'b0000 220 -r 240 
+force {wren} 1 0, 0 120 -r 240
+run 240ps

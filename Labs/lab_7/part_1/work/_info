@@ -1,0 +1,74 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dc:/Users/exle0/Documents/2018_Fall/CSC_258/Labs/lab_7/part_1
+vpart_1
+Z1 !s110 1542320030
+!i10b 1
+!s100 ;NU2J5eEH_C4Z?ZfYYDBO2
+Ioi9_ikFh:35C0BE7LF3<]0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542319634
+Z4 8top_leveled_ram32x4.v
+Z5 Ftop_leveled_ram32x4.v
+L0 41
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1542320030.000000
+Z8 !s107 top_leveled_ram32x4.v|
+Z9 !s90 -reportprogress|300|-timescale|1ps/1ps|top_leveled_ram32x4.v|
+!i113 1
+Z10 o-timescale 1ps/1ps
+Z11 tCvgOpt 0
+vram32x4
+R1
+!i10b 1
+!s100 eGJVZB>Z:3WKLGDU7dQbj3
+IN_FD``i=_[jNb^0O;oJNO1
+R2
+R0
+R3
+R4
+R5
+L0 82
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vvalue_to_HEX
+R1
+!i10b 1
+!s100 InWaH69JcRZOUPm_RR1=U3
+I1I6LA>2G5z`zjPAPjecZ70
+R2
+R0
+R3
+R4
+R5
+L0 68
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nvalue_to_@h@e@x

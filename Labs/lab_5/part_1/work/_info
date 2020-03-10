@@ -1,0 +1,95 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dc:/Users/exle0/Documents/2018_Fall/CSC_258/Labs/lab_5/part_1
+vcounter
+Z1 !s110 1539892156
+!i10b 1
+!s100 1G8^<XmBoOQ8gX?K0<>jY0
+ILjbmOW1YeGmOeW6b1eibF3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1539558440
+Z4 8part_1.v
+Z5 Fpart_1.v
+L0 15
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1539892156.000000
+Z8 !s107 part_1.v|
+Z9 !s90 -reportprogress|300|-timescale|1ns/1ns|part_1.v|
+!i113 1
+Z10 o-timescale 1ns/1ns
+Z11 tCvgOpt 0
+vcounter_piece
+R1
+!i10b 1
+!s100 0V`JkmCXZVNK@K^IPXJS51
+I7Gj_:Y:Wk72YWnOPJC_W90
+R2
+R0
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vpart_1
+R1
+!i10b 1
+!s100 >9eDDmNKXJcAb@CV:YjiO1
+IHj5AibW6J6nnN=0T@CY_F3
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vvalue_to_HEX
+R1
+!i10b 1
+!s100 :3ehC^;a;>af;bm6HLQTS2
+ILSi8ekZRJd@ha]:U6^Qoa1
+R2
+R0
+R3
+R4
+R5
+L0 56
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nvalue_to_@h@e@x

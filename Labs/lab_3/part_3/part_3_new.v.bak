@@ -1,0 +1,26 @@
+module part_3(SW, KEY, LEDR, HEX);
+	input [9:0] SW;
+	input [9:0] KEY;
+	output [9:0] LEDR;
+	output [6:0] HEX0;
+	output [6:0] HEX1;
+	output [6:0] HEX2;
+	output [6:0] HEX3;
+	output [6:0] HEX4;
+	output [6:0] HEX5;
+
+	adder_curcuit u0(
+			.X(A[3:0]),
+			.Y(4'b0001),
+			.cin(1'b0),
+			.S(Connection0_0[3:0]),
+			.cout(Connection0_1)
+			);
+	
+	adder_curcuit u1(
+			.X(A[3:0]),
+			.Y(B[3:0]),
+			.cin(1'b0),
+			.S(Connection1_0[3:0]),
+			.cout(Connection1_1)
+			);

@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/exle0/Documents/2018_Fall/CSC_258/Labs/lab_3/part_1
+vmux
+!s110 1538438515
+!i10b 1
+!s100 i4KedIb]EQd9zY^I_9JD]0
+IcdnX4ee<S;4LA?fQ5R5MM1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1538438506
+Z2 8seven_to_one_mux.v
+Z3 Fseven_to_one_mux.v
+L0 9
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1538438515.000000
+Z5 !s107 seven_to_one_mux.v|
+Z6 !s90 -reportprogress|300|-timescale|1ns/1ns|seven_to_one_mux.v|
+!i113 1
+Z7 o-timescale 1ns/1ns
+Z8 tCvgOpt 0
+vmux7to1
+Z9 !s110 1538695017
+!i10b 1
+!s100 WDAjgAZY>?KHBz]XM>=Q93
+Iz`3EW]6L5T8XER:3:4HMC2
+R1
+Z10 dc:/Users/exle0/Documents/2018_Fall/CSC_258/Labs/lab_3/part_1
+Z11 w1538694977
+Z12 8part_1.v
+Z13 Fpart_1.v
+L0 11
+R4
+r1
+!s85 0
+31
+Z14 !s108 1538695017.000000
+Z15 !s107 part_1.v|
+Z16 !s90 -reportprogress|300|-timescale|1ns/1ns|part_1.v|
+!i113 1
+R7
+R8
+vpart_1
+R9
+!i10b 1
+!s100 GYlg:0_[`8zHQKbTEK8dZ0
+ITMA0UF]Z>8IDHYK8ICMRY0
+R1
+R10
+R11
+R12
+R13
+L0 1
+R4
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R7
+R8
+vseven_to_one_mux
+!s110 1538613054
+!i10b 1
+!s100 PZ4e3RB45jnQL;fSb;Soo1
+I0om^CLKM]3O>Z:D:K1eL_1
+R1
+R0
+w1538613048
+R2
+R3
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1538613054.000000
+R5
+R6
+!i113 1
+R7
+R8

@@ -1,0 +1,147 @@
+|part2
+CLOCK_50 => CLOCK_50.IN2
+KEY[0] => resetn.IN2
+KEY[1] => go2.IN1
+KEY[2] => ~NO_FANOUT~
+KEY[3] => go1.IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+
+
+|part2|datapath:d0
+resetn => resetn.IN1
+clock => clock.IN1
+enable => enable.IN1
+coord_in[0] => x_data.DATAB
+coord_in[0] => y_data.DATAB
+coord_in[1] => x_data.DATAB
+coord_in[1] => y_data.DATAB
+coord_in[2] => x_data.DATAB
+coord_in[2] => y_data.DATAB
+coord_in[3] => x_data.DATAB
+coord_in[3] => y_data.DATAB
+coord_in[4] => x_data.DATAB
+coord_in[4] => y_data.DATAB
+coord_in[5] => x_data.DATAB
+coord_in[5] => y_data.DATAB
+coord_in[6] => x_data.DATAB
+coord_in[6] => y_data.DATAB
+colour_in[0] => colour.DATAB
+colour_in[1] => colour.DATAB
+colour_in[2] => colour.DATAB
+ld_x => x_data.OUTPUTSELECT
+ld_x => x_data.OUTPUTSELECT
+ld_x => x_data.OUTPUTSELECT
+ld_x => x_data.OUTPUTSELECT
+ld_x => x_data.OUTPUTSELECT
+ld_x => x_data.OUTPUTSELECT
+ld_x => x_data.OUTPUTSELECT
+ld_x => x_data.OUTPUTSELECT
+ld_y => y_data.OUTPUTSELECT
+ld_y => y_data.OUTPUTSELECT
+ld_y => y_data.OUTPUTSELECT
+ld_y => y_data.OUTPUTSELECT
+ld_y => y_data.OUTPUTSELECT
+ld_y => y_data.OUTPUTSELECT
+ld_y => y_data.OUTPUTSELECT
+ld_colour => colour.OUTPUTSELECT
+ld_colour => colour.OUTPUTSELECT
+ld_colour => colour.OUTPUTSELECT
+ld_r => x.OUTPUTSELECT
+ld_r => x.OUTPUTSELECT
+ld_r => x.OUTPUTSELECT
+ld_r => x.OUTPUTSELECT
+ld_r => x.OUTPUTSELECT
+ld_r => x.OUTPUTSELECT
+ld_r => x.OUTPUTSELECT
+ld_r => x.OUTPUTSELECT
+ld_r => y.OUTPUTSELECT
+ld_r => y.OUTPUTSELECT
+ld_r => y.OUTPUTSELECT
+ld_r => y.OUTPUTSELECT
+ld_r => y.OUTPUTSELECT
+ld_r => y.OUTPUTSELECT
+ld_r => y.OUTPUTSELECT
+x[0] <= x.DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= x.DB_MAX_OUTPUT_PORT_TYPE
+x[2] <= x.DB_MAX_OUTPUT_PORT_TYPE
+x[3] <= x.DB_MAX_OUTPUT_PORT_TYPE
+x[4] <= x.DB_MAX_OUTPUT_PORT_TYPE
+x[5] <= x.DB_MAX_OUTPUT_PORT_TYPE
+x[6] <= x.DB_MAX_OUTPUT_PORT_TYPE
+x[7] <= x.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+colour[0] <= colour.DB_MAX_OUTPUT_PORT_TYPE
+colour[1] <= colour.DB_MAX_OUTPUT_PORT_TYPE
+colour[2] <= colour.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|datapath:d0|counter:t0
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+resetn => q.OUTPUTSELECT
+resetn => q.OUTPUTSELECT
+resetn => q.OUTPUTSELECT
+resetn => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|control:c0
+resetn => resetn.IN1
+clock => clock.IN1
+go_1 => Selector1.IN2
+go_1 => Selector0.IN2
+go_1 => Selector2.IN1
+go_2 => Selector3.IN1
+go_2 => Selector2.IN2
+go_2 => Selector4.IN1
+ld_x <= ld_x.DB_MAX_OUTPUT_PORT_TYPE
+ld_y <= ld_y.DB_MAX_OUTPUT_PORT_TYPE
+ld_colour <= ld_r.DB_MAX_OUTPUT_PORT_TYPE
+ld_r <= ld_r.DB_MAX_OUTPUT_PORT_TYPE
+enable <= en.DB_MAX_OUTPUT_PORT_TYPE
+wren <= wren.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|control:c0|rate_divider:r0
+clk => out[0].CLK
+clk => out[1].CLK
+clk => out[2].CLK
+clk => out[3].CLK
+clk => out[4].CLK
+resetn => out.OUTPUTSELECT
+resetn => out.OUTPUTSELECT
+resetn => out.OUTPUTSELECT
+resetn => out.OUTPUTSELECT
+resetn => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+q <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
